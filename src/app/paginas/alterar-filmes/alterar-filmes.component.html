@@ -1,0 +1,27 @@
+<section class="container-alterar-filmes d-flex justify-content-center">
+    <div class="formulario">
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Nome do filme</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" [(ngModel)]='filme.nome'>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Descrição do filme</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]='filme.descricao'></textarea>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Nome do autor</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" [(ngModel)]='filme.autor'>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Sinopse do filme</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]='filme.sinopse'></textarea>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Link da imagem</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" [(ngModel)]='filme.img'>
+        </div>
+        <div class="grupo-botao">
+            <button type="button" class="btn btn-success btn-block">{{!id ? 'Cadastrar' : 'Salvar'}}</button>
+        </div>
+    </div>
+</section>

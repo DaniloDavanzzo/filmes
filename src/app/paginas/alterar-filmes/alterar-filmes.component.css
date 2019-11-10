@@ -1,0 +1,13 @@
+.container-alterar-filmes {
+    margin: 20px;
+}
+
+.formulario {
+    width: 100%;
+    max-width: 1000px;
+    display: inline-block;
+}
+
+.grupo-botao {
+    width: 200px;
+}
