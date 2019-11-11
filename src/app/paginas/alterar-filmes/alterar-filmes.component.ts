@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterLinkActive, ActivatedRoute } from '@angular/router';
+import { RouterLinkActive, ActivatedRoute, Router } from '@angular/router';
 import { FilmesModule } from 'src/app/@core/models/filmes.module';
 import { FilmesService } from 'src/app/@core/services/filmes.service';
 
@@ -14,6 +14,7 @@ export class AlterarFilmesComponent implements OnInit {
   public filme: FilmesModule = new FilmesModule();
 
   constructor(
+    private route: Router,
     private router: ActivatedRoute,
     private filmesServices: FilmesService
   ) { }
@@ -29,6 +30,10 @@ export class AlterarFilmesComponent implements OnInit {
     if(id) {
       this.filme = this.filmesServices.getFilmesById(id);
     }
+  }
+
+  finalizar(): void {
+    this.route.navigate(['/inicio'])
   }
 
 }

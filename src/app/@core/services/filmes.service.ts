@@ -4,12 +4,11 @@ import { FilmesModule } from '../models/filmes.module';
 import { Filmes } from 'src/app/@core/consts/filmes.const';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { FormsModule } from '@angular/forms';
 
 @Injectable()
 export class FilmesService {
 
-  private url: 'localhost:1000'
+  private url = 'localhost:1000'
 
   private headers: Headers = new Headers();
 
@@ -17,20 +16,20 @@ export class FilmesService {
 
   constructor(private http: HttpClient) { }
 
-  public getAllFilmes(): Observable<FormsModule> {
-    return this.http.get<FormsModule>(this.url + '/getAllFilmes');
+  public getAllFilmes(): Observable<Array<FilmesModule>> {
+    return this.http.get<Array<FilmesModule>>(this.url + '/getAllFilmes');
   }
 
-  public getFilmePorId(id): Observable<FormsModule> {
-    return this.http.get<FormsModule>(this.url + `/getFilmesById/${id}`);
+  public getFilmePorId(id): Observable<FilmesModule> {
+    return this.http.get<FilmesModule>(this.url + `/getFilmesById/${id}`);
   }
 
-  public addFilme(filme: FilmesModule): Observable<FormsModule> {
-    return this.http.post<FormsModule>(this.url + 'addFilme', filme);
+  public addFilme(filme: FilmesModule): Observable<FilmesModule> {
+    return this.http.post<FilmesModule>(this.url + 'addFilme', filme);
   }
 
-  public upadateFilme(id: number, filme: FilmesModule): Observable<FormsModule> {
-    return this.http.put<FormsModule>(this.url + `/updateFilme/${id}`, filme);
+  public upadateFilme(id: number, filme: FilmesModule): Observable<FilmesModule> {
+    return this.http.put<FilmesModule>(this.url + `/updateFilme/${id}`, filme);
   }
 
   public getFilmesById(id: any): FilmesModule {

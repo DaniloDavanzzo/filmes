@@ -21,7 +21,7 @@
             <input type="text" class="form-control" id="exampleFormControlInput1" [(ngModel)]='filme.img'>
         </div>
         <div class="grupo-botao">
-            <button type="button" class="btn btn-success btn-block">{{!id ? 'Cadastrar' : 'Salvar'}}</button>
+            <button type="button" (click)="finalizar()" class="btn btn-success btn-block">{{!id ? 'Cadastrar' : 'Salvar'}}</button>
         </div>
     </div>
 </section>

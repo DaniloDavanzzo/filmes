@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { FilmesModule } from 'src/app/@core/models/filmes.module';
 
 import {Filmes} from 'src/app/@core/consts/filmes.const';
+import { FilmesService } from 'src/app/@core/services/filmes.service';
 
 @Component({
   selector: 'app-inicio',
@@ -14,11 +15,22 @@ export class InicioComponent implements OnInit {
   public filmes: Array<FilmesModule> = new Array<FilmesModule>();
 
   constructor(
+    private filmesServices: FilmesService,
     private router: Router
   ) { }
 
   ngOnInit() { 
     this.filmes = Filmes;
+    this.getFilmes();
+  }
+
+  private getFilmes(): void {
+    /* this.filmesServices.getAllFilmes()
+      .subscribe(result => {
+        this.filmes = result;
+      }, error => {
+        console.log(error);
+      }) */
   }
 
   /**
