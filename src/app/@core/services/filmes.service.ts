@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class FilmesService {
 
-  private url = 'localhost:1000'
+  private url = 'http://localhost:8084/filmes_ws/';
 
   private headers: Headers = new Headers();
 

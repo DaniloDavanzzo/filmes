@@ -1,0 +1,12 @@
+.container-footer {
+    min-height: 95px;
+    text-align: center;
+    font-weight: 400;
+    color: #000;
+    background-color: #d9e4ef!important;
+    height: 40px;
+    margin: 0px auto;
+    padding: 31px 0 0 0;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}

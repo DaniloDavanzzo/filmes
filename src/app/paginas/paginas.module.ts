@@ -7,6 +7,7 @@ import { AlterarFilmesComponent } from './alterar-filmes/alterar-filmes.componen
 import { InicioComponent } from './inicio/inicio.component';
 import { PaginasRouting } from './paginas.routing';
 import { ComponentesModule } from '../componentes/componentes.module';
+import { ViewComponent } from './view/view.component';
 
 @NgModule({
     imports: [
@@ -18,8 +19,9 @@ import { ComponentesModule } from '../componentes/componentes.module';
     declarations: [
         PaginasComponent,
         AlterarFilmesComponent,
-        InicioComponent
+        InicioComponent,
+        ViewComponent
     ],
     exports: [],
 })
-export class PaginasModule { }
+export class PaginasModule {}

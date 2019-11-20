@@ -25,17 +25,17 @@ export class InicioComponent implements OnInit {
   }
 
   private getFilmes(): void {
-    /* this.filmesServices.getAllFilmes()
+    this.filmesServices.getAllFilmes()
       .subscribe(result => {
         this.filmes = result;
       }, error => {
-        console.log(error);
-      }) */
+       console.log(error);
+      })
   }
 
   /**
    * função responsavel por navegar até a tela de edição de filmes
-   * @param {number} id propriedade corresponde ao id do filme 
+   * @param {number} id propriedade corresponde ao id do filme
    */
   public editarFilme(id: number): void {
     this.router.navigate([`alterar-filme/${id}`]);

@@ -6,6 +6,7 @@
     width: 100%;
     max-width: 1000px;
     display: inline-block;
+    line-height: 0.8;
 }
 
 .grupo-botao {

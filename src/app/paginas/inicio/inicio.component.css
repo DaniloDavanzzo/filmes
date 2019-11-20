@@ -5,13 +5,17 @@
     flex-flow: row wrap;
 }
 .filmes {
-    width: 200px;
-    height: 400px;
+    width: 280px;
+    height: 162px;
     border: 1px solid;
     margin: 10px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    min-height: 9em;
+    display: table-cell;
+    vertical-align: middle;
+    
 }
 .detalhes-filmes {
     width: 100%;

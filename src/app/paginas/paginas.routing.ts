@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PaginasComponent } from './paginas.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { AlterarFilmesComponent } from './alterar-filmes/alterar-filmes.component';
+import { ViewComponent} from './view/view.component';
 
 const routes: Routes = [
     {
@@ -20,6 +21,10 @@ const routes: Routes = [
             {
                 path: 'alterar-filme/:id',
                 component: AlterarFilmesComponent
+            },
+            {
+                path: 'view',
+                component: ViewComponent
             },
         ]
     }
