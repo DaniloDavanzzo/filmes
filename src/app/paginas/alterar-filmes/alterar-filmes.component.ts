@@ -33,6 +33,13 @@ export class AlterarFilmesComponent implements OnInit {
   }
 
   finalizar(): void {
+    /* this.filmesServices.addFilme(this.filme)
+    .subscribe(result => {
+      console.log('teste', result);
+      
+    }, error => {
+     console.log(error);
+    }) */
     this.route.navigate(['/inicio'])
   }
 

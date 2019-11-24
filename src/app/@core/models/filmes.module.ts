@@ -1,17 +1,17 @@
 export class FilmesModule {
     id: number;
-    nome: string;
-    descricao: string;
-    autor: string;
-    sinopse: string;
-    img: string;
+    title: string;
+    description: string;
+    author: string;
+    synopsis: string;
+    link_img: string;
 
     constructor() {
         this.id = 0;
-        this.nome = '';
-        this.descricao = '';
-        this.autor = '';
-        this.sinopse = '';
-        this.img = '';
+        this.title = '';
+        this.description = '';
+        this.author = '';
+        this.synopsis = '';
+        this.link_img = '';
     }
 }

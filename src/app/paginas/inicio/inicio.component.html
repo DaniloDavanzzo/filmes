@@ -1,11 +1,11 @@
 <section class="container-filmes">
     <article class="grupo-filmes d-flex justify-content-center">
-        <div class="filmes" *ngFor="let filme of filmes" [ngStyle]="{'background-image': 'url(' + filme.img + ')'}">
+        <div class="filmes" *ngFor="let filme of filmes" [ngStyle]="{'background-image': 'url(' + filme.link_img + ')'}">
             <div class="detalhes-filmes">
-                <p>{{filme.nome}}</p>
-                <p>{{filme.descricao}}</p>
-                <p>{{filme.autor}}</p>
-                <p>{{filme.sinopse}}</p>
+                <p>{{filme.title}}</p>
+                <p>{{filme.description}}</p>
+                <p>{{filme.author}}</p>
+                <p>{{filme.synopsis}}</p>
                 <button type="button" class="btn btn-secondary btn-sm" (click)="editarFilme(filme.id)">Editar</button>
             </div>
         </div>

@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class FilmesService {
 
-  private url = 'http://localhost:8084/filmes_ws/';
+  private url = 'http://localhost:8080/FilmesWebServices/webresources/filme/Filme';
 
   private headers: Headers = new Headers();
 
@@ -17,11 +17,11 @@ export class FilmesService {
   constructor(private http: HttpClient) { }
 
   public getAllFilmes(): Observable<Array<FilmesModule>> {
-    return this.http.get<Array<FilmesModule>>(this.url + '/getAllFilmes');
+    return this.http.get<Array<FilmesModule>>(this.url + '/list');
   }
 
   public getFilmePorId(id): Observable<FilmesModule> {
-    return this.http.get<FilmesModule>(this.url + `/getFilmesById/${id}`);
+    return this.http.get<FilmesModule>(this.url + `/get/${id}`);
   }
 
   public addFilme(filme: FilmesModule): Observable<FilmesModule> {

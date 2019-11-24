@@ -19,7 +19,7 @@ export class InicioComponent implements OnInit {
     private router: Router
   ) { }
 
-  ngOnInit() { 
+  ngOnInit() {
     this.filmes = Filmes;
     this.getFilmes();
   }
@@ -27,7 +27,8 @@ export class InicioComponent implements OnInit {
   private getFilmes(): void {
     this.filmesServices.getAllFilmes()
       .subscribe(result => {
-        this.filmes = result;
+        console.log('teste', result);
+        // this.filmes = result;
       }, error => {
        console.log(error);
       })

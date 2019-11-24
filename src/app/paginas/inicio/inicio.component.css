@@ -17,6 +17,10 @@
     vertical-align: middle;
     
 }
+p {
+    margin: 2px;
+}
+
 .detalhes-filmes {
     width: 100%;
     height: 100%;
